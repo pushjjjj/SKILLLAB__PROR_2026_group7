@@ -225,13 +225,13 @@ In the basic version, there is no mobile app involved. The system works automati
 ## 6.3 Input / Output Map
 
 | System Part                              | Type            | What It Does                                                               |
- Top Input Bin / Funnel                      input             Receives waste from the user and guides it into the sensing chamber
- Magnet (Metal Detection)                    input             Identifies if the waste is metal based on magnetic attraction
- Soil Moisture / Capacitive Sensor           input             Detects moisture level to classify wet waste
- Shrike Lite Controller                      processing        Reads sensor data and decides the waste category (metal, wet, or dry)
- Servo Motor (Rotating Base)                 output            Rotates the base to align the correct bin under the chamber
- Servo Motor (Trapdoor)                      output            Opens/closes the flap to release waste into the selected bin
- Rotating Base with 3 Bins                   output            Collects segregated waste in separate compartments
+ Top Input Bin / Funnel                    | input           | Receives waste from the user and guides it into the sensing chamber
+ Magnet (Metal Detection)                  | input           | Identifies if the waste is metal based on magnetic attraction
+ Soil Moisture / Capacitive Sensor         | input           | Detects moisture level to classify wet waste
+ Shrike Lite Controller                    | processing      | Reads sensor data and decides the waste category (metal, wet, or dry)
+ Servo Motor (Rotating Base)               | output          | Rotates the base to align the correct bin under the chamber
+ Servo Motor (Trapdoor)                    | output          | Opens/closes the flap to release waste into the selected bin
+ Rotating Base with 3 Bins                 |  output         | Collects segregated waste in separate compartments
 
 
 # 7. Sketches and Visual Planning
