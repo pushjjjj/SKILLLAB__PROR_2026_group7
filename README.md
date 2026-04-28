@@ -57,7 +57,7 @@ By the final review, this README should clearly show:
 
 ## 1.1 Studio / Group Name
 
-``
+`group7`
 
 ## 1.2 Team Members
 
@@ -65,10 +65,12 @@ By the final review, this README should clearly show:
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
 | `Gopalakrishnan` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
 | `KAder Shaikh`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
+| `Gopalakrishnan` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
+| `KAder Shaikh`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
 
 ## 1.3 Project Title
 
-`"Project Project"`
+`"Intelligent waste classfiction system "`
 
 `(because Project-or)`
 
