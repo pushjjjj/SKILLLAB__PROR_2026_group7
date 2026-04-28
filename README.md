@@ -63,7 +63,7 @@ By the final review, this README should clearly show:
 
 | Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
-| `Saloani Sawant` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
+| `Saloni Sawant` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
 | `Pushkar Sawlani`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
 | `Faizan Shah` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
 | `Aditya Singh`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
@@ -90,8 +90,9 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`An Intelligent Waste Classification System is a smart prototype that automatically identifies and separates waste into categories such as metal, wet, and dry. The system uses a single input bin where the waste is first analyzed using simple sensing methods—magnetic detection for metals and a moisture sensor for wet waste. Based on this classification, a controller processes the data and activates a mechanical system that directs the waste into the appropriate bin, ensuring efficient and organized disposal.
-The system creates a real-time, interactive experience where users can observe how waste is detected and sorted automatically without manual effort. It combines sensor-based decision-making with mechanical automation, making the process both educational and practical. Technologies involved include a Shrike Lite controller, servo motors for rotating the bin base and operating a trapdoor, and sensors like a soil moisture sensor and magnet-based detection. This project demonstrates how basic electronics and automation can contribute to smarter waste management solutions.`
+`Our project, Intelligent Waste Classification System, is a smart setup that automatically sorts waste into metal, wet, and dry categories using a single input bin. When someone drops waste into the bin, the system quickly checks what type it is using simple sensors, then rotates the base and opens a small flap to drop it into the correct compartment. It’s designed to make waste sorting feel effortless and automatic.
+While building this project, we gained a lot of hands-on experience. We didn’t just connect components—we had to figure out how everything works together in real life. We faced issues like sensors giving unstable readings, servos not moving properly due to power problems, and alignment errors in the rotating base. Fixing these taught us a lot about debugging, teamwork, and practical problem-solving. Overall, it helped us understand how to turn an idea into a working system using technologies like Shrike Lite, sensors, and motors.`
+.`
 
 ---
 
@@ -99,8 +100,8 @@ The system creates a real-time, interactive experience where users can observe h
 
 ## 2.1 Experience, Not Social Problem
 
-`The project creates an interactive and engaging experience where users can observe how a system intelligently identifies and sorts waste in real time. When an item is dropped into the top bin, the system pauses briefly to analyze it, then smoothly rotates the base and releases the waste into the correct compartment. This sequence—detect, decide, rotate, and drop—gives a clear visual understanding of how automation and decision-making work together, making the system feel responsive and “intelligent.”
-From a user’s perspective, the experience is simple and intuitive: just drop an item and watch the system handle the rest. The motion of the rotating base, the timing of the trapdoor, and optional feedback like LEDs or buzzer signals make the process dynamic and easy to follow. It demonstrates how sensors, controllers, and actuators can be combined to create a smart, automated system, turning a basic action into an engaging technological interaction.`
+`While making the Intelligent Waste Classification System, we got real hands-on experience of how things actually work outside of theory. In the beginning, everything looked simple, but once we started building, we realized even small things like loose wires or wrong sensor values could affect the whole system. We spent time testing, adjusting, and fixing issues until the sensors started giving stable readings and the system behaved the way we wanted.
+The mechanical part was even more interesting. Getting the rotating base to align perfectly with the bins and making the trapdoor open at the right time took a lot of trial and error. We also faced problems with servo power, where motors didn’t work properly until we fixed the power supply. Throughout this process, we worked together, shared ideas, and helped each other debug problems. In the end, it felt really satisfying to see our idea turn into a working system, and we learned a lot about practical electronics, teamwork, and problem-solving.`
 
 
 
@@ -114,7 +115,7 @@ List what inspired the project.
 
 | Source Type | Title / Link                                                        | What Inspired You                                                                         |
 | ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `[Video]`   | `https://www.instagram.com/reel/DW4CT7WCDry/?igsh=cXg3dzAxYmdncDBo` | `How projection mapping can be used to create interactive digital + physical experiences` |
+| `chatgpt`   | `https://chatgpt.com/share/69f0519f-790c-8324-baa5-1d6b88c218c7`    | ``|
 |             |                                                                     |                                                                                           |
 |             |                                                                     |                                                                                           |
 
