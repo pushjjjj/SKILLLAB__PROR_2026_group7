@@ -648,16 +648,19 @@ Contamination (Fouling): In a waste system, "wet" doesn't just mean water; it me
 | **Trapdoor Torque** | 100g load on door mechanism. | Smooth motion without jitter. |
 ## 15.2 Testing and Debugging Log
 
-| Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
-| ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| `18th April`  | `Car not balancing properly`          | `Mechanical` | `Add low-friction caster support to one side` | `Worked`             | `improve caster structure`                     |
-
+Date | Problem Found | Type | What You Tried | Result | Next Action |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `28-Apr` | Base instability | Mech | Added caster support | **Worked** | Finalize housing |
+| `28-Apr` | MG995 stuttering | Elec | Powered via Shrike Lite | **Failed** | Wire external 6V |
+| `28-Apr` | False wet trigger | Tech | Wiped sensor probes | **Partial** | Code debounce logic |
 
 ## 15.3 Playtesting Notes
 
-| Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
-| ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-| `Gopal` | `Tried navigating through obstacles` | `Some obstacles ewren't clear enough` | `Liked projection + real car interaction` | `Add a slight red highlight around obstacles` |
+| Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
+| :--- | :--- | :--- | :--- | :--- |
+| `faizin` | Navigated car through obstacles. | Obstacles weren't visually clear. | Interaction between projection and car. | Add red highlights around obstacle zones. |
+| `aditya` | Disposed of mixed waste items. | Delay between sensing and rotation. | Seeing the MG995 snap to the correct bin. | Optimize code delay; add a "Sensing..." LED. |
+| `faizain` | Tested with wet cardboard. | Why it went to "Dry" instead of "Wet". | The touchless trapdoor mechanism. | Adjust moisture threshold; tilt sensor for contact. |
 
 
 ---
@@ -679,21 +682,31 @@ Include:
 - revisions.
 
 **Response:**  
-`The fabrication process involved designing, manufacturing, assembling, and refining both the physical structure and electronic integration of the system.`
+The physical construction of the Smart Waste Segregation System followed a modular approach, focusing on mechanical stability to support the high-torque MG995 servos.
 
-`Design (CAD Modeling):
-The initial model was created using CAD software, where components were designed based on the actual dimensions of the electronic parts. This ensured accurate fitting and minimized errors during assembly.
-Cutting (Laser Cutting):
-The designed parts were fabricated using laser cutting techniques. Sheets were cut precisely according to the CAD model to create the structural base and mounts for components.`
+### 1. Cutting & Material Preparation
+- **Chassis:** Primary structure cut from 5mm corrugated cardboard/acrylic for a balance of weight and rigidity.
+- **Bin Dividers:** Custom-cut partitions at 120° intervals to create three distinct waste zones (Metal, Wet, Dry).
+- **Sensing Chamber:** A funnel-shaped input zone was precision-cut to ensure waste slides directly across the sensors.
 
-`Components were fixed using adhesives and mechanical supports. Certain parts were intentionally kept modular (not permanently fixed) to allow easy replacement and modification of electronics.
-Surface Finishing:
-Some parts were sanded to smooth rough edges after cutting. Sawdust mixed with adhesive was used to fill gaps and uneven edges, improving structural finish. The final structure was then painted for better aesthetics and durability.`
+### 2. 3D Printing
+- **Servo Horn Extensions:** Custom 3D-printed arms for the MG995 servos to increase the sweep radius of the trapdoor.
+- **Sensor Mounts:** Printed snap-fit brackets for the PNP Proximity sensor and Soil Moisture sensor to maintain consistent alignment.
+- **Couplers:** A central hub printed to connect the base MG995 to the rotating bin assembly.
 
-`Environment Setup (Dark Room Fabrication):
-To enhance projection visibility, a controlled dark environment was created using Z-boards, paper sheets, and bedsheets. This minimized external light interference and improved projection clarity.
-Revisions and Iterations:
-Multiple adjustments were made throughout the process, including refining alignment, improving structural stability, repositioning components, and optimizing the interaction between the physical car and projected environment.`
+### 3. Assembly & Fastening
+- **Base Layer:** The rotating bin assembly was mounted on a central axis using a low-friction thrust bearing/caster system to reduce motor strain.
+- **Fastening:** M3 bolts and nuts were used for high-stress areas (motor mounts), while hot glue and double-sided foam tape were used for lightweight sensor positioning.
+
+### 4. Wiring & Electronics
+- **Power Rail:** A dedicated 6V DC power rail was established to handle the 1.2A stall current of the MG995 servos.
+- **Signal Logic:** Used shielded jumper wires to connect the PNP sensor to the Shrike Lite to prevent Electromagnetic Interference (EMI) from the motors.
+- **Common Ground:** All grounds (Servo PSU, Shrike Lite, Sensors) were tied to a single point to ensure PWM signal integrity.
+
+### 5. Finishing & Revisions
+- **Finishing:** Applied a waterproof coating/linings to the "Wet" bin to prevent material degradation over time.
+- **Mechanical Revision:** Initially, the MG995 caused the base to "jitter." **Revision:** Added a low-friction caster support (as noted in log 15.2) to stabilize the rotation.
+- **Software Calibration:** Adjusted the trapdoor's "Home" position pulse width to 1.5ms to ensure a tight seal when closed.
 
 ## 16.2 Build Photos
 
