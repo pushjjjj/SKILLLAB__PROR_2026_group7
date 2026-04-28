@@ -231,7 +231,7 @@ Include:
 `2. Processing`
 `Inside the chamber, the system checks the type of waste. A magnet is used to detect if the object is metal, and a moisture sensor checks if it is wet. The controller (Shrike Lite) reads these inputs and decides which category the waste belongs to—metal, wet, or dry.`
 `3. Output`
-`Once the decision is made, a servo motor rotates the base so that the correct bin is aligned below the chamber. Then, a small trapdoor (controlled by another servo) opens, and the waste drops into the selected bin. The system may also give feedback using an LED or buzzer.`
+`Once the decision is made, a servo motor rotates the base so that the correct bin is aligned below the chamber. Then, a small trapdoor (controlled by another servo) opens, and the waste drops into the selected bin.`
 `4. Physical Structure`
 `The system has a top input bin, a middle sensing chamber, and a bottom rotating platform with three bins attached. The servo motor is placed at the center to rotate the base, and another servo controls the trapdoor. The structure can be built using cardboard or lightweight materials.`
 `5. App Interaction (if any)`
@@ -242,7 +242,7 @@ Include:
 | System Part                              | Type            | What It Does                                                               |
  Top Input Bin / Funnel                    | input           | Receives waste from the user and guides it into the sensing chamber
  Magnet (Metal Detection)                  | input           | Identifies if the waste is metal based on magnetic attraction
- Soil Moisture / Capacitive Sensor         | input           | Detects moisture level to classify wet waste
+ Soil Moisture                             | input           | Detects moisture level to classify wet waste
  Shrike Lite Controller                    | processing      | Reads sensor data and decides the waste category (metal, wet, or dry)
  Servo Motor (Rotating Base)               | output          | Rotates the base to align the correct bin under the chamber
  Servo Motor (Trapdoor)                    | output          | Opens/closes the flap to release waste into the selected bin
@@ -358,11 +358,11 @@ Include:
 When the system is powered on, the controller initializes all pins, sets the servo motors to their default positions (base aligned to a neutral position and trapdoor closed), and starts serial communication for debugging if required. The system then enters a standby mode, waiting for waste input.
 
 **Input Handling**
-The system monitors for input using an ultrasonic sensor (if used) or assumes input when waste is placed in the chamber. Once an object is detected, the system temporarily pauses further actions to allow stable sensor readings.
+The system monitors for input when waste is placed in the chamber. Once an object is detected, the system temporarily pauses further actions to allow stable sensor readings.
 
 **Sensor Reading**
 The controller reads data from the sensors:
-Checks magnetic condition (metal detection using magnet logic)
+Checks magnetic condition (metal detection using proximity sensor)
 Reads analog values from the soil moisture sensor to determine if the waste is wet
 Multiple readings may be taken to improve accuracy.
 
@@ -378,7 +378,6 @@ The controller sends signals to the servo motors:
 Rotates the base servo to align the correct bin (e.g., 0°, 120°, 240°)
 After alignment, activates the trapdoor servo to open and drop the waste
 Closes the trapdoor after a short delay
-Optional: activates LED or buzzer to indicate the detected category
 
 **Communication Logic**
 If debugging is enabled, the system sends sensor readings and classification results to the serial monitor. In advanced versions, this can be extended to display output on an LCD or send data to an app.
