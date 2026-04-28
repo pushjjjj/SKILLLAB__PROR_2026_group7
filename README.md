@@ -146,7 +146,8 @@ She tried again, this time with a piece of wet tissue. The same process repeated
 # 5. Definition of Success
 
 ## 5.1 Definition of “Usable”
-
+`A system is considered “usable” when a user can interact with it easily and achieve the intended outcome without confusion or assistance. In this project, usability means that a user can simply drop waste into the input bin and the system will automatically detect, classify, and direct it into the correct compartment without requiring any additional steps. The process should feel intuitive, smooth, and reliable, with clear feedback such as visible movement of the rotating base or indicator signals (LED or buzzer) confirming the action.
+Additionally, the system should perform consistently under normal conditions, with minimal errors in classification and stable mechanical operation. The components should respond quickly, and the entire sequence—from detection to disposal—should occur within a few seconds. A usable system also implies that it is safe to handle, easy to demonstrate, and understandable to observers, making it suitable for real-world application as well as educational purposes.`
 
 
 ## 5.2 Minimum Usable Version
@@ -154,14 +155,18 @@ She tried again, this time with a piece of wet tissue. The same process repeated
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
+## 5.2 Minimum Usable Version
+
+`The smallest version of this project that still delivers the core experience is a **two-category system (Metal vs Normal waste)** using a **single input bin, one detection method, and one servo mechanism**. In this version, the user drops waste into the top chamber, where a simple **magnet-based detection** identifies whether the item is metal. Based on this, a **single servo motor** rotates or directs the waste toward either the metal bin or the normal waste bin. This keeps the system simple while still demonstrating the key idea of automated classification and sorting.
+Even without multiple sensors or advanced features, this minimal setup still provides the essential experience: the system detects, makes a decision, and physically directs the waste accordingly. The user can clearly observe the sequence—input, detection, movement, and output—which is the core concept of the project. Additional features like wet waste detection, LEDs, or a rotating multi-bin base can be added later, but this basic version is enough to show a working, intelligent waste classification system.`
 
 
 ## 5.3 Stretch Features
 
 What features are nice to have but not essential?
 
+`Stretch features are enhancements that improve the system’s performance, appearance, or user experience but are not required for the core functionality of waste classification and sorting. One useful addition is a three-category system (metal, wet, and dry) by integrating a moisture sensor along with the existing metal detection. Another enhancement is adding LED indicators or a buzzer to provide clear feedback about the detected waste type, making the system more interactive and easier to understand during demonstrations.Further improvements could include a transparent viewing window so users can see the internal working, or an LCD display that shows messages like “Metal Detected” or “Wet Waste.” You could also add automatic lid opening using an ultrasonic sensor for a touchless experience. For a more advanced version, features like data logging, IoT connectivity, or mobile app integration can be included to track waste patterns. While these features make the project more impressive and user-friendly, the system can still function effectively without them.`
 
----
 
 # 6. System Overview
 
@@ -179,15 +184,15 @@ Check all that apply.
 
 - [x] Motorized
 
-- [ ] Sound-based
+- [x] Sound-based
 
-- [x] Light-based
+- [ ] Light-based
 
-- [x] Screen/UI-based
+- [ ] Screen/UI-based
 
 - [x] Fabricated structure
 
-- [x] Game logic based
+- [ ] Game logic based
 
 - [x] Installation
 
@@ -206,6 +211,16 @@ Include:
 - app interaction if any.
 
 **Response:**  
+`1. Input
+The user simply drops a piece of waste into the top opening of the bin. The waste enters a small chamber inside the system instead of falling directly down.
+2. Processing
+Inside the chamber, the system checks the type of waste. A magnet is used to detect if the object is metal, and a moisture sensor checks if it is wet. The controller (Shrike Lite) reads these inputs and decides which category the waste belongs to—metal, wet, or dry.
+3. Output
+Once the decision is made, a servo motor rotates the base so that the correct bin is aligned below the chamber. Then, a small trapdoor (controlled by another servo) opens, and the waste drops into the selected bin. The system may also give feedback using an LED or buzzer.
+4. Physical Structure
+The system has a top input bin, a middle sensing chamber, and a bottom rotating platform with three bins attached. The servo motor is placed at the center to rotate the base, and another servo controls the trapdoor. The structure can be built using cardboard or lightweight materials.
+5. App Interaction (if any)
+In the basic version, there is no mobile app involved. The system works automatically based on sensors and programmed logic. However, in advanced versions, an app or display can be added to show waste type or system status.`
 
 ## 6.3 Input / Output Map
 
