@@ -73,7 +73,7 @@ By the final review, this README should clearly show:
 `"Intelligent waste classfiction system "`
 
 `(because Project-or)`
-
+https://youtu.be/Qsmccs7feB4?si=hoKAJlMjIZMdWqf3
 <img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/group7_geotag.jpeg" />
 <img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/team_logo.jpeg" />
 
