@@ -547,7 +547,7 @@ Everyone will contribute actively to ensure successful completion of the project
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
 | Concept              | `[Aditya & Faizan]`   | `[Pushkar & Saloni]`               |
-| Electronics          | `[Faizan]`                 | `[faizan and Saloni]`                               |
+| Electronics          | `[Faizan]`                 | `[Faizan and Saloni]`                               |
 | Coding               | `[Aditya]`                 | `[Faizan]`                               |
 | Mechanical build     | `[Saloni]`                 | `[Faizan and Aditya]`                               |
 | Testing              | `[Faizan and Aditya]`                 | `[Saloni]`                               |
@@ -599,7 +599,7 @@ Expected outcomes:
 - [x] Playtesting completed
 - [x] Improvements made
 - [x] Documentation completed
-- [x] Final build ready
+- [ ] Final build ready
 
 ## 13.2  Update Log
 
@@ -607,8 +607,8 @@ Expected outcomes:
 | ------ | -------------- | ---------------------- | -------------- | -------------- |
 | Hour 1 | `Idea finalization` | `Ideal Finalized`         | `[NA]` | `[Connection]` |
 | Hour 2 | `[Hardware Finalization]` | `[Hardware connected]`| `Magnetic sensor changed with proximity sensor` | `Testing` |
-| Hour 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Hour 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Hour 3 | `[Testing and Debugging]` | `[Tested all the components and testing the system working]`         | `[NA]` | `[Proper working]` |
+| Hour 4 | `[Final product assembly]` | `[Working of the project]`         | `[NA]` | `[NA]` |
 
 ---
 <img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/geotag1.jpeg" />
