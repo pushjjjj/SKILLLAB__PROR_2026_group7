@@ -301,7 +301,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/7.2_Labled_sketch.jpeg" />
+<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/circuit_diagram.jpeg" />
 
 
 # 9. Power Plan
