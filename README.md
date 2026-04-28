@@ -115,7 +115,7 @@ List what inspired the project.
 
 | Source Type | Title / Link                                                        | What Inspired You                                                                         |
 | ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `chatgpt`   | `https://chatgpt.com/share/69f0519f-790c-8324-baa5-1d6b88c218c7`    | ``|
+| `chatgpt`   | `https://chatgpt.com/share/69f0519f-790c-8324-baa5-1d6b88c218c7`    | `Ideas`|
 |             |                                                                     |                                                                                           |
 |             |                                                                     |                                                                                           |
 
