@@ -73,7 +73,7 @@ By the final review, this README should clearly show:
 `(because Project-or)`
 
 <img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/group7_geotag.jpeg" />
-<img width="1600" height="1131" alt="image" src="" />
+<img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/team_logo.jpeg" />
 
 ## 1.4 One-Line Pitch
 
