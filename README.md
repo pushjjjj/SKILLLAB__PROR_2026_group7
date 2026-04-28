@@ -616,9 +616,15 @@ Expected outcomes:
 
 ## 14.1 Risk Register
 
-| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                       | Owner                |
-| --------------------------------------------------------------- | ------------ | ---------- | -------- | ------------------------------------------------------------------------------------- | -------------------- |
-| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Gopal]`           |
+## 14.1 Risk Register
+
+| Risk | Owner | Type | Likelihood | Impact | Mitigation Plan | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Servo Power Brownout** | `[Connection]` | `Electrical` | `High` | `High` | Use dedicated external 5V/2A power supply for MG995 servos; add 1000uF capacitor to power rail. | `[To Do]` |
+| **Sensor Fouling** | `[Connection]` | `Maintenance` | `Medium` | `Medium` | Design sensing chamber for easy cleaning; implement software "auto-calibration" at startup. | `[To Do]` |
+| **Mechanical Jamming** | `[Design]` | `Physical` | `Medium` | `High` | Use high-torque servos for trapdoor; design smooth-walled funnel for waste entry. | `[In Progress]` |
+| **False Metal Detection** | `[Software]` | `Technical` | `Low` | `Medium` | Implement "signal debouncing" in Shrike Lite logic (require 5 consecutive high readings). | `[Pending]` |
+| **Bin Misalignment** | `[Mechanical]` | `Mechanical` | `Medium` | `Medium` | Implement software offsets for 120°/240° positions; use mechanical hard-stops for 0° index. | `[To Do]` |
 
 
 ## 14.2 Biggest Unknown Right Now
@@ -626,7 +632,7 @@ Expected outcomes:
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
-
+Contamination (Fouling): In a waste system, "wet" doesn't just mean water; it means food waste, liquids, and grime. After just a few cycles, the moisture sensor will likely be coated in a thin film of residue. This can cause the sensor to remain "triggered" (high moisture) even after the bin is empty, leading the system to send all subsequent dry waste into the "Wet" bin.
 
 ---
 
@@ -634,10 +640,11 @@ What is the single biggest uncertainty in your project at this stage?
 
 ## 15.1 Technical Testing Plan
 
-| What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `[Wifi connection]`    | `[Check if motor spins via app button]`                                              | `[Both motors accurately respond to wifi signals]`                                                   |
-                       |
+| What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                 |
+| **Servo Power** | Trigger both MG995s simultaneously. | No system reset; voltage stays >4.8V. |
+| **Metal Logic** | Pass steel vs. plastic over PNP sensor. | 0° rotation for metal only. |
+| **Moisture Logic** | Test dry paper vs. wet sponge. | 240° for paper; 120° for sponge. |
+| **Trapdoor Torque** | Load 100g weight on MG995 door. | Smooth opening without jitter. |
 ## 15.2 Testing and Debugging Log
 
 | Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
