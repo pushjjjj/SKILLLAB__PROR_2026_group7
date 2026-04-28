@@ -392,7 +392,7 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/7.2_Labled_sketch.jpeg" />
+<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/7.1_concept_sketch.jpeg" />
 
 
 
@@ -403,45 +403,46 @@ Suggested sequence:
 
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
 | -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`  |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
+| `[Shrike Lite Controller]`       | `1`      | `Yes`   | `No`         | `0`            | `Microcontroller board`       | `[To control components]` |
+| `[Servo Motor]`                  | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[MG995]`                     | `[Rotates base with bins]`|
+| `[Soil Moisture Sensor]`         | `[1]`    | `[No]`  | `[Yes]`      | `[0]`          | `analog sensor`               | `[Detects wet waste]`     |
+| `[Magnet]`                       | `[1]`    | `[No]`  | `[Yes]`      | `[25]`         |  `proximity`                  | `[Detects metal waste]`   |
+| `[Power Supplyr]`                | `[1]`    | `[No]`  | `[Yes]`      | `[150]`        |  `5V 2A supply`               | `[Stable power for system]`|
 
 ## 11.2 Material Justification
 
 Explain why you selected your main materials and components.
 
 **Response:**  
-`DC motors (BO motors) were chosen instead of servos or steppers because the system requires continuous rotation for movement rather than precise angular control (Previously, we were considering using steppers as we were planning on tracking movement on the ESP using its relative position from an origin, but since we're using a camera now, this is not required). A motor driver (L298N) was used to allow bidirectional control and speed variation using PWM.`
+`The system uses servo motors instead of DC motors or steppers because the application requires precise angular positioning (rotating to exact bin positions), not continuous rotation. A high-torque servo (MG995/MG996) is used for rotating the base because it can handle the weight of multiple bins, while a smaller servo (SG90) is sufficient for the trapdoor mechanism.
+For sensing, a soil moisture sensor is selected for its simplicity and low cost to detect wet waste, and a magnet-based approach is used for metal detection since it is reliable and does not require complex circuitry. The Shrike Lite controller integrates all inputs and outputs, making it ideal for handling decision-making and control in a compact system.`
 
 
 ## 11.3 Items You chose
 
 | Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
 | -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
-| `BO Motors + Wheels` | `Drive system for car`   | `robu.in`     | `15th April`                | `[Received]` |
-| `Buck Converter`     | `Stable power for ESP32` | `local store` | `before testing`            | `[Received]` |
-| `Li-ion Batteries`   | `Portable power`         | `local store` | `before testing`            | `Recieved`   |
+| `magnet`             | `Metal detection`        | `local store` | `before testing`            | `[Received]` |
+| `5V Power Supply`    | `Stable power 0f 5v`     | `local store` | `before testing`            | `[Received]` |
+| `Extra jumper wires` | `Backup connections`     | `local store` | `before testing`            | `Recieved`   |
 
 ## 11.4 Budget Summary
 
 | Budget Item           | Estimated Cost              |
 | --------------------- | ---------------------------:|
-| Electronics           | `[400]`                     |
-| Mechanical parts      | `[200]`                     |
+| Electronics           | `[150]`                     |
+| Mechanical parts      | `[50]`                      |
 | Fabrication materials | `[0 (Available on campus)]` |
 | Purchased extras      | `[0]`                       |
-| Contingency           | `[300]`                     |
-| **Total**             | `[900]`                     |
+| Contingency           | `[200]`                     |
+| **Total**             | `[400]`                     |
 
 ## 11.5 Budget Reflection
 
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-
+If the cost needs to be reduced further, the system can be simplified by removing optional components such as the ultrasonic sensor, LEDs, and buzzer, as they do not affect the core functionality. A single servo design (2-bin system instead of 3-bin) can also be used to reduce complexity and power requirements. Additionally, using available lab components instead of purchasing new ones helps minimize expenses while still maintaining a functional prototype.
 ---
 
 # 12. Planning the Work
@@ -459,7 +460,65 @@ Include:
 - how documentation will be maintained.
 
 **Response:**  
+**1. Task Division**
 
+Faizan → Responsible for hardware design and assembly (circuit, sensors, structure).
+
+Aditya → Responsible for testing and debugging (checking functionality, fixing errors).
+
+Pushkar & Saloni → Responsible for documentation (report writing, diagrams, presentation, and explanation).
+
+**2. Decision-Making Process**
+
+All major decisions will be discussed as a team.
+
+Final decisions will be made based on majority agreement.
+
+In case of technical issues, the person responsible for that area (e.g., hardware or testing) will have the final say.
+
+**3. Progress Tracking**
+
+Progress will be checked at the end of each work session.
+
+Each member will give a quick update on:
+
+What was completed
+
+What is pending
+
+A simple checklist will be maintained to track tasks.
+
+**4. Handling Delays**
+
+If a task is delayed:
+
+The member must inform the team immediately.
+
+Other members will assist if needed.
+
+Tasks may be redistributed to ensure project completion on time.
+
+**5. Documentation Maintenance**
+
+All documentation will be handled by Pushkar and Saloni.
+
+Work will be updated regularly (not left for the last moment).
+
+Final documents will include:
+
+Circuit diagram
+
+Working explanation
+
+Images of the project
+
+Code (if applicable)
+
+**6. Team Commitment**
+
+All members will communicate clearly and respect deadlines.
+
+Everyone will contribute actively to ensure successful completion of the project.
 
 ## 12.2 Task Breakdown
 
