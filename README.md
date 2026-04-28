@@ -417,11 +417,12 @@ Suggested sequence:
 
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
 | -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[Shrike Lite Controller]`       | `1`      | `Yes`   | `No`         | `0`            | `Microcontroller board`       | `[To control components]` |
-| `[Servo Motor]`                  | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[MG995]`                     | `[Rotates base with bins]`|
-| `[Soil Moisture Sensor]`         | `[1]`    | `[No]`  | `[Yes]`      | `[0]`          | `analog sensor`               | `[Detects wet waste]`     |
-| `[Magnet]`                       | `[1]`    | `[No]`  | `[Yes]`      | `[25]`         |  `proximity`                  | `[Detects metal waste]`   |
-| `[Power Supplyr]`                | `[1]`    | `[No]`  | `[Yes]`      | `[150]`        |  `5V 2A supply`               | `[Stable power for system]`|
+| `[Shrike Lite Controller]`       | `[1]`      | `[Yes]`   | `[No]`         | `[0]`            | `[Microcontroller board]`       | `[To control components]` |
+| `[Servo Motor]`                  | `[1]`    | `[Yes]` | `[No]`       | `[0]`            | `[MG995]`                     | `[Rotates base with bins]`|
+| `[Soil Moisture Sensor]`         | `[1]`    | `[No]`  | `[Yes]`      | `[0]`          | `[analog sensor]`               | `[Detects wet waste]`     |
+| `[Magnet]`                       | `[1]`    | `[No]`  | `[Yes]`      | `[25]`         |  `[proximity]`                  | `[Detects metal waste]`   |
+| `[Power Supplyr]`                | `[1]`    | `[No]`  | `[Yes]`      | `[150]`        |  `[5V 2A supply]`               | `[Stable power for system]`|
+| `[Servo Motor]`                  | `[1]`    | `[Yes]` | `[No]`       | `[0]`            | `[SG90]`                     | `[Opens the trapdoor]`|
 
 ## 11.2 Material Justification
 
@@ -436,27 +437,25 @@ For sensing, a soil moisture sensor is selected for its simplicity and low cost 
 
 | Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
 | -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
-| `magnet`             | `Metal detection`        | `local store` | `before testing`            | `[Received]` |
-| `5V Power Supply`    | `Stable power 0f 5v`     | `local store` | `before testing`            | `[Received]` |
-| `Extra jumper wires` | `Backup connections`     | `local store` | `before testing`            | `Recieved`   |
+| `Cardboard`             | `Assembly`        | `Local store` | `28th April 2026`            | `[Received]` |
 
 ## 11.4 Budget Summary
 
 | Budget Item           | Estimated Cost              |
 | --------------------- | ---------------------------:|
-| Electronics           | `[150]`                     |
-| Mechanical parts      | `[50]`                      |
+| Electronics           | `[0]`                     |
+| Mechanical parts      | `[0]`                      |
 | Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[0]`                       |
-| Contingency           | `[200]`                     |
-| **Total**             | `[400]`                     |
+| Purchased extras      | `[50]`                       |
+| Contingency           | `[]`                     |
+| **Total**             | `[50]`                     |
 
 ## 11.5 Budget Reflection
 
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`If the cost needs to be reduced further, the system can be simplified by removing optional components such as the ultrasonic sensor, LEDs, and buzzer, as they do not affect the core functionality. A single servo design (2-bin system instead of 3-bin) can also be used to reduce complexity and power requirements. Additionally, using available lab components instead of purchasing new ones helps minimize expenses while still maintaining a functional prototype.`
+`A single servo design (2-bin system instead of 3-bin) can also be used to reduce complexity and power requirements. Additionally, using available lab components instead of purchasing new ones helps minimize expenses while still maintaining a functional prototype.`
 
 
 # 12. Planning the Work
@@ -538,21 +537,21 @@ Everyone will contribute actively to ensure successful completion of the project
 
 | Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
 | ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `problem statement `    | `[all]`  | `1`             | `none`       | `None`     | `Done` |
-| T2      | `project design`        | `[2]`    | `2`             | `none`       | `None`     | `Done` |
-| T3      | `programing `           | `[2]`    | `1`             | `none`       | `None`     | `Done` |
-| T4      | `testing & debug`       | `[2]`    | `1`             | `none`       | `None`     | `Done` |
-| T5      | `documenatation `       | `[2]`    | `1`             | `none`       | `None`     | `Done` |
+| T1      | `problem statement `    | `[All]`  | `1`             | `none`       | `None`     | `Done` |
+| T2      | `project design`        | `[Saloni]`    | `1`             | `none`       | `None`     | `Done` |
+| T3      | `programing `           | `[Aditya]`    | `1`             | `none`       | `None`     | `Done` |
+| T4      | `testing & debug`       | `[Faizan]`    | `2`             | `none`       | `None`     | `Done` |
+| T5      | `documenatation `       | `[Pushkar]`    | `2`             | `none`       | `None`     | `Done` |
 ## 12.3 Responsibility Split
 
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
 | Concept              | `[Aditya & Faizan]`   | `[Pushkar & Saloni]`               |
-| Electronics          | `[x]`                 | `[]`                               |
-| Coding               | `[x]`                 | `[]`                               |
-| Mechanical build     | `[x]`                 | `[]`                               |
-| Testing              | `[x]`                 | `[]`                               |
-| Documentation        | `[]`                  | `[x]`                              |
+| Electronics          | `[Faizan]`                 | `[faizan and Saloni]`                               |
+| Coding               | `[Aditya]`                 | `[Faizan]`                               |
+| Mechanical build     | `[Saloni]`                 | `[Faizan and Aditya]`                               |
+| Testing              | `[Faizan and Aditya]`                 | `[Saloni]`                               |
+| Documentation        | `[Pushkar]`                  | `[Saloni]`                              |
 
 ---
 
