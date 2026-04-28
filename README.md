@@ -506,7 +506,7 @@ Expected outcomes:
 | Hour 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
-
+<img width="1600" height="1200" alt="="" />
 # 14. Risks and Unknowns
 
 ## 14.1 Risk Register
