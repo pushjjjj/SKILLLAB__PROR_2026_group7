@@ -257,7 +257,7 @@ Add an early sketch of the full idea.
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/7.1_concept_sketch.jpeg" />
+<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/concept_chart.jpeg" />
 
 
 
