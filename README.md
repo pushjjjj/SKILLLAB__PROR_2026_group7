@@ -640,11 +640,12 @@ Contamination (Fouling): In a waste system, "wet" doesn't just mean water; it me
 
 ## 15.1 Technical Testing Plan
 
-| What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                 |
-| **Servo Power** | Trigger both MG995s simultaneously. | No system reset; voltage stays >4.8V. |
-| **Metal Logic** | Pass steel vs. plastic over PNP sensor. | 0° rotation for metal only. |
-| **Moisture Logic** | Test dry paper vs. wet sponge. | 240° for paper; 120° for sponge. |
-| **Trapdoor Torque** | Load 100g weight on MG995 door. | Smooth opening without jitter. |
+| What Needs Testing | How You Will Test It | Success Condition |
+| :--- | :--- | :--- |
+| **Power Stability** | Simultaneous MG995 movement. | No system reset; Voltage > 4.8V. |
+| **Metal Logic** | Steel nut vs. plastic bottle. | 0° rotation for metal only. |
+| **Moisture Logic** | Dry paper vs. wet sponge. | 240° for paper; 120° for sponge. |
+| **Trapdoor Torque** | 100g load on door mechanism. | Smooth motion without jitter. |
 ## 15.2 Testing and Debugging Log
 
 | Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
