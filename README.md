@@ -63,10 +63,10 @@ By the final review, this README should clearly show:
 
 | Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
-| `Saloni Sawant` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `Pushkar Sawlani`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
-| `Faizan Shah` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `Aditya Singh`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
+| `Saloni Sawant` | `Documentation` | `Hardwarwe`  | `Documentation, Gift of Gab `|
+| `Pushkar Sawlani`  | `Documentation`   | `Coding`     | `Material Handling, Hardware`    |
+| `Faizan Shah` | `Hardware` | `Documentation`  | `Documentation, Gift of Gab `|
+| `Aditya Singh`  | `Hardware`   | `Coding`     | `Material Handling, Hardware`    |
 
 ## 1.3 Project Title
 
@@ -124,8 +124,8 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-`What makes this project original is its combination of sensing, decision-making, and mechanical movement in a compact, single-input design. Instead of using separate bins or a simple drop mechanism, the system first holds the waste in a sensing chamber, classifies it, and only then uses a servo-driven rotating base to align the correct bin before releasing it through a controlled trapdoor. This “detect → decide → rotate → drop” sequence makes the system more structured and reliable compared to basic sorting prototypes.
-Another unique aspect is the hybrid classification approach using simple, low-cost methods—magnetic detection for metal and moisture sensing for wet waste—while assigning everything else as dry waste. This keeps the system practical and easy to build, yet still demonstrates intelligent automation. The integration of multiple mechanisms (dual servo control, rotating platform, and staged processing) gives the project a more advanced and polished feel, making it stand out as both a mechanical and electronics-based innovation rather than just a basic sensor demo.`
+`What makes our project original is how everything works together in a smooth, step-by-step way, just like shown in the diagram. Instead of directly throwing waste into separate bins, our system first stops the waste, checks it using sensors, decides the type, and then moves the correct bin into position before dropping it. This “think → rotate → drop” process makes it feel more like an intelligent system rather than a simple dustbin.
+Another thing that makes it unique is that we used simple components in a smart way. A magnet is used to detect metal, a moisture sensor checks for wet waste, and if neither is detected, it automatically considers it dry. Then, instead of multiple openings, we use one input and a rotating base with three bins, which makes the design compact and efficient. It’s not just about separating waste, it’s about showing how a system can sense, decide, and act, making it more interactive and interesting to use..`
 
 ---
 
@@ -135,9 +135,9 @@ Another unique aspect is the hybrid classification approach using simple, low-co
 
 Describe exactly how a user will use the project.Make it a story
 **Response:** 
-`Riya stood in front of what looked like an ordinary dustbin, turning a small metal bottle cap in her hand. “It’s just a bin,” she thought—until she noticed a small label: Intelligent Waste Classification System. Curious, she dropped the cap into the opening.
-Instead of falling straight down, the cap seemed to pause inside. For a second, nothing happened. Then she heard a soft hum. Inside the system, something was deciding. The base beneath began to rotate slowly, almost like it knew exactly where to go. Suddenly, a small flap opened, and the cap dropped neatly into one of the hidden bins below. A tiny LED blinked, confirming the action. Riya smiled, impressed.
-She tried again, this time with a piece of wet tissue. The same process repeated—pause, think, rotate, drop—but this time the base stopped at a different position. It felt almost alive, like the bin was “understanding” what she gave it. What seemed like a simple dustbin had turned into an interactive experience—one where every drop of waste triggered a quiet moment of intelligence, making her see something ordinary in a completely new way.`
+`Arjun walks up to the system holding a small piece of waste. At first glance, it looks like a normal bin with a single opening on top. Curious, he drops the waste inside. Instead of it falling straight down, it pauses for a moment inside the box—almost like the system is “thinking.”
+Behind the scenes, the sensors quickly check the waste. Within a second, the base below starts to rotate smoothly, bringing one of the bins right under the chamber. Arjun watches as the system quietly makes its decision. Then, a small flap opens, and the waste drops neatly into the correct bin. The flap closes, and the system goes back to its ready position.
+He tries again with a different item. This time, the base rotates to a different bin before dropping it. It feels like the system understands what he’s giving it. What seemed like just another dustbin turns into something interesting. He doesn’t have to think about sorting anymore, he just drops the waste and watches the system handle everything on its own..`
                                                   
 
 
@@ -147,8 +147,7 @@ She tried again, this time with a piece of wet tissue. The same process repeated
 # 5. Definition of Success
 
 ## 5.1 Definition of “Usable”
-`A system is considered “usable” when a user can interact with it easily and achieve the intended outcome without confusion or assistance. In this project, usability means that a user can simply drop waste into the input bin and the system will automatically detect, classify, and direct it into the correct compartment without requiring any additional steps. The process should feel intuitive, smooth, and reliable, with clear feedback such as visible movement of the rotating base or indicator signals (LED or buzzer) confirming the action.
-Additionally, the system should perform consistently under normal conditions, with minimal errors in classification and stable mechanical operation. The components should respond quickly, and the entire sequence—from detection to disposal—should occur within a few seconds. A usable system also implies that it is safe to handle, easy to demonstrate, and understandable to observers, making it suitable for real-world application as well as educational purposes.`
+`The system is “usable” if a user can simply drop waste into the bin without needing any instructions, and the system takes care of the rest. It should work quickly, reliably, and safely, without confusing the user. A usable system also means the process is smooth to observe—detecting, rotating, and dropping—so anyone can understand how it works just by watching it..`
 
 
 ## 5.2 Minimum Usable Version
@@ -158,8 +157,23 @@ What is the smallest version of this project that still delivers the core experi
 **Response:**  
 ## 5.2 Minimum Usable Version
 
-`The smallest version of this project that still delivers the core experience is a **two-category system (Metal vs Normal waste)** using a **single input bin, one detection method, and one servo mechanism**. In this version, the user drops waste into the top chamber, where a simple **magnet-based detection** identifies whether the item is metal. Based on this, a **single servo motor** rotates or directs the waste toward either the metal bin or the normal waste bin. This keeps the system simple while still demonstrating the key idea of automated classification and sorting.
-Even without multiple sensors or advanced features, this minimal setup still provides the essential experience: the system detects, makes a decision, and physically directs the waste accordingly. The user can clearly observe the sequence—input, detection, movement, and output—which is the core concept of the project. Additional features like wet waste detection, LEDs, or a rotating multi-bin base can be added later, but this basic version is enough to show a working, intelligent waste classification system.`
+`The Minimum Usable Version of this project is the simplest working model that still performs the main task of sorting waste automatically into the correct bin.
+For this Smart Waste Segregation System, the minimum usable version would include:
+1 input bin where waste is inserted
+1 metal sensor to detect metal waste
+1 wet sensor to detect wet waste
+1 Shrike Lite controller to read sensor data and make decisions
+1 rotating base with 3 bins (Metal, Wet, Dry)
+1 servo motor for rotating the base
+1 servo motor for opening the trapdoor
+How it works in the minimum version:
+When a user puts waste into the input bin, the sensors check the type of waste.
+
+If metal is detected → the base rotates to the metal bin
+If wet waste is detected → the base rotates to the wet bin
+If neither is detected → it is treated as dry waste
+
+After the correct bin comes under the trapdoor, the servo opens the trapdoor and the waste falls into that bin.`
 
 
 ## 5.3 Stretch Features
