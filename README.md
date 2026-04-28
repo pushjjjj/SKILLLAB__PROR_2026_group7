@@ -506,7 +506,7 @@ Expected outcomes:
 | Hour 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
-<img width="1600" height="1200" alt="="" />
+<img width="1600" height="1200" alt="="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/geotag1.jpeg" />
 # 14. Risks and Unknowns
 
 ## 14.1 Risk Register
