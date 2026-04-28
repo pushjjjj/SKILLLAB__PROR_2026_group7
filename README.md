@@ -211,16 +211,16 @@ Include:
 - app interaction if any.
 
 **Response:**  
-`1. Input
-The user simply drops a piece of waste into the top opening of the bin. The waste enters a small chamber inside the system instead of falling directly down.
-2. Processing
-Inside the chamber, the system checks the type of waste. A magnet is used to detect if the object is metal, and a moisture sensor checks if it is wet. The controller (Shrike Lite) reads these inputs and decides which category the waste belongs to—metal, wet, or dry.
-3. Output
-Once the decision is made, a servo motor rotates the base so that the correct bin is aligned below the chamber. Then, a small trapdoor (controlled by another servo) opens, and the waste drops into the selected bin. The system may also give feedback using an LED or buzzer.
-4. Physical Structure
-The system has a top input bin, a middle sensing chamber, and a bottom rotating platform with three bins attached. The servo motor is placed at the center to rotate the base, and another servo controls the trapdoor. The structure can be built using cardboard or lightweight materials.
-5. App Interaction (if any)
-In the basic version, there is no mobile app involved. The system works automatically based on sensors and programmed logic. However, in advanced versions, an app or display can be added to show waste type or system status.`
+`1. Input`
+`The user simply drops a piece of waste into the top opening of the bin. The waste enters a small chamber inside the system instead of falling directly down.`
+`2. Processing`
+`Inside the chamber, the system checks the type of waste. A magnet is used to detect if the object is metal, and a moisture sensor checks if it is wet. The controller (Shrike Lite) reads these inputs and decides which category the waste belongs to—metal, wet, or dry.`
+`3. Output`
+`Once the decision is made, a servo motor rotates the base so that the correct bin is aligned below the chamber. Then, a small trapdoor (controlled by another servo) opens, and the waste drops into the selected bin. The system may also give feedback using an LED or buzzer.`
+`4. Physical Structure`
+`The system has a top input bin, a middle sensing chamber, and a bottom rotating platform with three bins attached. The servo motor is placed at the center to rotate the base, and another servo controls the trapdoor. The structure can be built using cardboard or lightweight materials.`
+`5. App Interaction (if any)`
+`In the basic version, there is no mobile app involved. The system works automatically based on sensors and programmed logic. However, in advanced versions, an app or display can be added to show waste type or system status.`
 
 ## 6.3 Input / Output Map
 
@@ -276,26 +276,23 @@ Add a sketch with labels showing:
 
 ## 8.1 Electronics Used
 
-| Component                 | Quantity | Purpose                               |
-| ------------------------- | --------:| ------------------------------------- |
-| `[ESP32]`                 | `1`      | `[Main controller]`                   |
-| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
-| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
-| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
-| `[Projector]`             | `1`      | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
+| Component                 | Quantity | Purpose                                            |
+| ------------------------- | --------:| ---------------------------------------------------|
+| `[Shrike Lite Controller]`| `1`      | `[Main controller]`                                |
+| `[servo  Motor Driver]`   | `1`      | `[Control Motors]`                                 |
+| `[Soil Moisture Sensor]`  | `1`      | `[Detects wet waste based on moisture content]`    |
+| `[Power Supply (5V ]`     | `1`      | `[Supplies power to the controller and components]`|
+
 
 ## 8.2 Wiring Plan
 
 Describe the main electrical connections.
 
 **Response:**  
-`The ESP32 is connected to the motor driver (L298N) using four GPIO pins (18,19; 22,23) to control motor direction (IN1, IN2, IN3, IN4). Two PWM-capable pins (ENA and ENB; 25 and 26) are connected to control the speed of each motor.
-
-The motors are connected to the output terminals of the motor driver. The motor driver is powered directly by the battery pack (higher voltage), while the ESP32 receives regulated 5V from the buck converter.
-
-All components share a common ground to ensure stable operation. The projector and camera are connected to the laptop, which handles tracking and game logic separately.`
+`The Shrike Lite controller acts as the central hub for all connections. It is powered using a stable 5V supply, with the VCC and GND pins distributed to all components through a breadboard to ensure a common ground.
+The soil moisture sensor is connected with its VCC to 5V, GND to GND, and output pin to an analog input pin of the controller, allowing it to measure moisture levels. The ultrasonic sensor (if used) has its VCC and GND connected to power, while its TRIG and ECHO pins are connected to two digital pins on the controller for object detection.
+For actuation, two servo motors are used. The rotating base servo (MG995/MG996) has its power (red) connected to an external 5V supply, ground to common GND, and signal wire connected to a PWM digital pin on the controller. The trapdoor servo (SG90) is connected similarly, with its signal wire going to another PWM pin. It is important to use a stable power source for servos to avoid voltage drops.
+Optional output components like LEDs are connected to digital pins through current-limiting resistors, and the buzzer is connected to a digital pin and ground for sound feedback. All components share a common ground, ensuring proper communication and stable operation of the system.`
 
 ## 8.3 Circuit Diagram
 
@@ -303,17 +300,17 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="867" height="1156" alt="" src="" />
+<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/7.2_Labled_sketch.jpeg" />
 
 
 # 9. Power Plan
 
 | Question         | Response                                                                                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power source     | `Battery (Li-ion pack)`                                                                                                                           |
-| Voltage required | `~6–8.4V for motors (via driver), stepped down to 5V for ESP32 (buck converter)`                                                                  |
-| Current concerns | `Motors can draw high current under load, which may cause voltage drops affecting ESP32 and WiFi stability`                                       |
-| Safety concerns  | `Avoid over-discharging Li-ion batteries, ensure proper voltage regulation, prevent short circuits, and secure wiring to avoid loose connections` |
+| Power source     | `5v powersupply `                                                                                                                           |
+| Voltage required | `5v dc `                                                                                                                                    |
+| Current concerns | `1-2A`                                                                                                                                      |
+| Safety concerns  | `Ensure correct polarity, avoid short circuits, use insulated connections, and do not overload the power supply to prevent overheating`     |
 
 ---
 
@@ -321,12 +318,10 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 10.1 Software Tools
 
-| Tool / Platform                | Purpose                                        |
-| ------------------------------ | ---------------------------------------------- |
-| `[MicroPython]`                | `Control ESP32`                                |
-| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
-| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
-|                                |                                                |
+| Tool / Platform                | Purpose                                                                                   |
+| ------------------------------ | ----------------------------------------------------------------------------------------- |
+| `[Arduino IDE]`                | `Writing, compiling, and uploading code to the controller`                                |
+
 
 ## 10.2 Software Logic
 
@@ -344,21 +339,42 @@ Include:
 
 **Response:**  
 `
+**Startup Behavior**
+When the system is powered on, the controller initializes all pins, sets the servo motors to their default positions (base aligned to a neutral position and trapdoor closed), and starts serial communication for debugging if required. The system then enters a standby mode, waiting for waste input.
 
-- **Startup behavior:**  
-  The ESP32 initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
-- **Input handling:**  
-  Movement commands are received from the laptop (pygame sends http requests)
-- **Sensor reading:**  
-  The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
-- **Decision logic:**  
-  The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
-- **Output behavior:**  
-  The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
-- **Communication logic:**  
-  The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
-- **Reset behavior:**  
-  If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
+**Input Handling**
+The system monitors for input using an ultrasonic sensor (if used) or assumes input when waste is placed in the chamber. Once an object is detected, the system temporarily pauses further actions to allow stable sensor readings.
+
+**Sensor Reading**
+The controller reads data from the sensors:
+Checks magnetic condition (metal detection using magnet logic)
+Reads analog values from the soil moisture sensor to determine if the waste is wet
+Multiple readings may be taken to improve accuracy.
+
+**Decision Logic**
+Based on the sensor data:
+If metal is detected → classify as metal
+Else if moisture level is above threshold → classify as wet
+Else → classify as dry
+The system selects the corresponding bin position.
+
+**Output Behavior**
+The controller sends signals to the servo motors:
+Rotates the base servo to align the correct bin (e.g., 0°, 120°, 240°)
+After alignment, activates the trapdoor servo to open and drop the waste
+Closes the trapdoor after a short delay
+Optional: activates LED or buzzer to indicate the detected category
+
+**Communication Logic**
+If debugging is enabled, the system sends sensor readings and classification results to the serial monitor. In advanced versions, this can be extended to display output on an LCD or send data to an app.
+
+**Reset Behavior**
+After the waste is dropped, the system resets by:
+Returning the base servo to a default standby position
+Ensuring the trapdoor is closed
+Clearing any temporary variables
+Returning to idle state, ready for the next input
+
 
 ## 10.3 Code Flowchart
 
@@ -376,8 +392,7 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-<img width="1600" height="1200" alt="image" src="" />
-<img width="1600" height="1200" alt="image" src="" />
+<img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/7.2_Labled_sketch.jpeg" />
 
 
 
