@@ -123,7 +123,8 @@ List what inspired the project.
 What makes your project original?
 
 **Response:**  
-
+`What makes this project original is its combination of sensing, decision-making, and mechanical movement in a compact, single-input design. Instead of using separate bins or a simple drop mechanism, the system first holds the waste in a sensing chamber, classifies it, and only then uses a servo-driven rotating base to align the correct bin before releasing it through a controlled trapdoor. This “detect → decide → rotate → drop” sequence makes the system more structured and reliable compared to basic sorting prototypes.
+Another unique aspect is the hybrid classification approach using simple, low-cost methods—magnetic detection for metal and moisture sensing for wet waste—while assigning everything else as dry waste. This keeps the system practical and easy to build, yet still demonstrates intelligent automation. The integration of multiple mechanisms (dual servo control, rotating platform, and staged processing) gives the project a more advanced and polished feel, making it stand out as both a mechanical and electronics-based innovation rather than just a basic sensor demo.`
 
 ---
 
@@ -133,7 +134,9 @@ What makes your project original?
 
 Describe exactly how a user will use the project.Make it a story
 **Response:**  
-
+`Riya stood in front of what looked like an ordinary dustbin, turning a small metal bottle cap in her hand. “It’s just a bin,” she thought—until she noticed a small label: Intelligent Waste Classification System. Curious, she dropped the cap into the opening.
+Instead of falling straight down, the cap seemed to pause inside. For a second, nothing happened. Then she heard a soft hum. Inside the system, something was deciding. The base beneath began to rotate slowly, almost like it knew exactly where to go. Suddenly, a small flap opened, and the cap dropped neatly into one of the hidden bins below. A tiny LED blinked, confirming the action. Riya smiled, impressed.
+She tried again, this time with a piece of wet tissue. The same process repeated—pause, think, rotate, drop—but this time the base stopped at a different position. It felt almost alive, like the bin was “understanding” what she gave it. What seemed like a simple dustbin had turned into an interactive experience—one where every drop of waste triggered a quiet moment of intelligence, making her see something ordinary in a completely new way.`
                                                   |
 
 
