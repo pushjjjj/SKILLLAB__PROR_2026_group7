@@ -317,7 +317,6 @@ Insert a hand-drawn or software-made circuit diagram.
 `[Upload image and link here]`
 <img width="1600" height="1200" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/circuit_diagram.jpeg" />
 
-
 # 9. Power Plan
 
 | Question         | Response                                                                                                                                          |
@@ -930,7 +929,7 @@ Before submission, confirm that:
 - [x] Playtesting notes are included
 - [x] Build photos are included
 - [x] Final reflection is written
-<img width="1131" height="1600" alt="image" src="" />
+<img width="1131" height="1600" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/circuit_diagram.jpeg" />
 
 ---
 
