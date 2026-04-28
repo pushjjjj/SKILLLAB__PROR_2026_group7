@@ -442,8 +442,8 @@ For sensing, a soil moisture sensor is selected for its simplicity and low cost 
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-If the cost needs to be reduced further, the system can be simplified by removing optional components such as the ultrasonic sensor, LEDs, and buzzer, as they do not affect the core functionality. A single servo design (2-bin system instead of 3-bin) can also be used to reduce complexity and power requirements. Additionally, using available lab components instead of purchasing new ones helps minimize expenses while still maintaining a functional prototype.
----
+`If the cost needs to be reduced further, the system can be simplified by removing optional components such as the ultrasonic sensor, LEDs, and buzzer, as they do not affect the core functionality. A single servo design (2-bin system instead of 3-bin) can also be used to reduce complexity and power requirements. Additionally, using available lab components instead of purchasing new ones helps minimize expenses while still maintaining a functional prototype.`
+
 
 # 12. Planning the Work
 
@@ -524,19 +524,21 @@ Everyone will contribute actively to ensure successful completion of the project
 
 | Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
 | ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Both]` | `2`             | `1st April`  | `None`     | `Done` |
-
-
+| T1      | `problem statement `    | `[all]`  | `1`             | `none`       | `None`     | `Done` |
+| T2      | `project design`        | `[2]`    | `2`             | `none`       | `None`     | `Done` |
+| T3      | `programing `           | `[2]`    | `1`             | `none`       | `None`     | `Done` |
+| T4      | `testing & debug`       | `[2]`    | `1`             | `none`       | `None`     | `Done` |
+| T5      | `documenatation `       | `[2]`    | `1`             | `none`       | `None`     | `Done` |
 ## 12.3 Responsibility Split
 
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
-| Concept              | `[Gopal]`  | `[Kader]`    |
-| Electronics          | `[]`       | `[]`     |
-| Coding               | `[]`       | `[]`     |
-| Mechanical build     | `[]`       | `[]`    |
-| Testing              | `[]`       | `[]`    |
-| Documentation        | `[]`       | `[]`     |
+| Concept              | `[Aditya & Faizan]`   | `[Pushkar & Saloni]`               |
+| Electronics          | `[x]`                 | `[]`                               |
+| Coding               | `[x]`                 | `[]`                               |
+| Mechanical build     | `[x]`                 | `[]`                               |
+| Testing              | `[x]`                 | `[]`                               |
+| Documentation        | `[]`                  | `[x]`                              |
 
 ---
 
