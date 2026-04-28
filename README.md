@@ -99,18 +99,10 @@ The system creates a real-time, interactive experience where users can observe h
 
 ## 2.1 Experience, Not Social Problem
 
-This module does **not** require your project to solve a large social problem.
+`The project creates an interactive and engaging experience where users can observe how a system intelligently identifies and sorts waste in real time. When an item is dropped into the top bin, the system pauses briefly to analyze it, then smoothly rotates the base and releases the waste into the correct compartment. This sequence—detect, decide, rotate, and drop—gives a clear visual understanding of how automation and decision-making work together, making the system feel responsive and “intelligent.”
+From a user’s perspective, the experience is simple and intuitive: just drop an item and watch the system handle the rest. The motion of the rotating base, the timing of the trapdoor, and optional feedback like LEDs or buzzer signals make the process dynamic and easy to follow. It demonstrates how sensors, controllers, and actuators can be combined to create a smart, automated system, turning a basic action into an engaging technological interaction.`
 
-You are allowed to build:
 
-- toys,
-- games,
-- interactive objects,
-- playful machines,
-- kinetic artifacts,
-- humorous devices,
-- strange but delightful experiences,
-- things that are entertaining to use or watch.
 
 
 
