@@ -474,7 +474,7 @@ Expected outcomes:
 - [ ] CAD / structure planning completed
 - [ ] App UI started if needed
 - [x] Mechanical concept tested
-- [x] Main subsystems partially working
+- [ ] Main subsystems partially working
 
 ### Bi Hour 3 — Integrate
 
@@ -498,12 +498,12 @@ Expected outcomes:
 
 ## 13.2  Update Log
 
-| Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
+| Hours   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
 | ------ | -------------- | ---------------------- | -------------- | -------------- |
-| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Hour 1 | `Idea finalization` | `Ideal Finalized`         | `[NA]` | `[Connection]` |
+| Hour 2 | `[Hardware Finalization]` | `[Hardware connected]`| `Magnetic sensor changed with proximity sensor` | `Testing` |
+| Hour 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Hour 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
 
