@@ -612,6 +612,7 @@ Expected outcomes:
 
 ---
 <img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/geotag1.jpeg" />
+  <img width="1600" height="1131" alt="image" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/final_output.jpeg" />                  
 # 14. Risks and Unknowns
 
 ## 14.1 Risk Register
@@ -682,31 +683,70 @@ Include:
 - revisions.
 
 **Response:**  
-The physical construction of the Smart Waste Segregation System followed a modular approach, focusing on mechanical stability to support the high-torque MG995 servos.
+he Smart Waste Segregation System was built as a compact, layered prototype using cardboard and basic mechanical components. The structure was divided into three main sections: the input and sensing chamber, the actuation mechanism, and the output bins.
 
-### 1. Cutting & Material Preparation
-- **Chassis:** Primary structure cut from 5mm corrugated cardboard/acrylic for a balance of weight and rigidity.
-- **Bin Dividers:** Custom-cut partitions at 120° intervals to create three distinct waste zones (Metal, Wet, Dry).
-- **Sensing Chamber:** A funnel-shaped input zone was precision-cut to ensure waste slides directly across the sensors.
+---
 
-### 2. 3D Printing
-- **Servo Horn Extensions:** Custom 3D-printed arms for the MG995 servos to increase the sweep radius of the trapdoor.
-- **Sensor Mounts:** Printed snap-fit brackets for the PNP Proximity sensor and Soil Moisture sensor to maintain consistent alignment.
-- **Couplers:** A central hub printed to connect the base MG995 to the rotating bin assembly.
+1. Base Structure (Foundation)
 
-### 3. Assembly & Fastening
-- **Base Layer:** The rotating bin assembly was mounted on a central axis using a low-friction thrust bearing/caster system to reduce motor strain.
-- **Fastening:** M3 bolts and nuts were used for high-stress areas (motor mounts), while hot glue and double-sided foam tape were used for lightweight sensor positioning.
+A sturdy base platform was created using thick cardboard to support the entire system. A servo motor (MG996R) was fixed at the center of this base using glue and support brackets. A circular rotating platform was attached to the servo shaft. Three lightweight bins (plastic cups) were fixed evenly on this circular platform at 120° intervals to represent metal, wet, and dry waste bins.
 
-### 4. Wiring & Electronics
-- **Power Rail:** A dedicated 6V DC power rail was established to handle the 1.2A stall current of the MG995 servos.
-- **Signal Logic:** Used shielded jumper wires to connect the PNP sensor to the Shrike Lite to prevent Electromagnetic Interference (EMI) from the motors.
-- **Common Ground:** All grounds (Servo PSU, Shrike Lite, Sensors) were tied to a single point to ensure PWM signal integrity.
+---
 
-### 5. Finishing & Revisions
-- **Finishing:** Applied a waterproof coating/linings to the "Wet" bin to prevent material degradation over time.
-- **Mechanical Revision:** Initially, the MG995 caused the base to "jitter." **Revision:** Added a low-friction caster support (as noted in log 15.2) to stabilize the rotation.
-- **Software Calibration:** Adjusted the trapdoor's "Home" position pulse width to 1.5ms to ensure a tight seal when closed.
+2. Input Funnel and Sensing Chamber
+
+Above the rotating base, a funnel-shaped input section was constructed using cardboard to guide waste into a small enclosed sensing chamber.
+
+Inside this chamber:
+
+- A PNP proximity sensor was mounted on the side wall to detect metallic objects.
+- A soil moisture sensor was placed at the bottom so that the waste comes in contact with it to measure moisture content.
+
+The chamber was designed to temporarily hold the waste during detection to prevent premature dropping.
+
+---
+
+3. Trapdoor Mechanism
+
+At the bottom of the sensing chamber, a small flap (trapdoor) was installed using cardboard.
+This flap was connected to a second servo motor, which controls its opening and closing.
+
+- When closed → waste stays in the chamber
+- When opened → waste falls into the bin below
+
+This mechanism ensures controlled and accurate disposal.
+
+---
+
+4. Rotating Bin Mechanism
+
+The three bins were mounted on a rotating circular plate attached to the MG996R servo motor.
+
+Based on the classification:
+
+- The servo rotates to a specific angle (0°, 120°, or 240°)
+- The correct bin aligns directly below the trapdoor
+
+This design ensures that the waste falls into the correct bin without needing multiple chutes.
+
+---
+
+5. Electronics Integration
+
+The Shrike Lite controller was placed on the side of the structure for easy access. All sensors and servos were connected using jumper wires.
+
+- The proximity sensor was powered using a 9V battery with a voltage divider for safe signal input.
+- The soil moisture sensor was connected to an analog input pin.
+- Both servos were powered using a stable 5V supply.
+- All grounds were connected together to ensure proper operation.
+
+---
+
+6. Assembly and Finishing
+
+All components were secured using a glue gun and tape. The structure was kept lightweight to reduce load on the servo motor. Labels were added to bins (Metal, Wet, Dry) for clarity.
+
+The final prototype was compact, portable, and designed for easy demonstration.
 
 ## 16.2 Build Photos
 
@@ -720,7 +760,7 @@ Suggested images:
 - mechanism test,
 - app screenshot,
 - final build.
-- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/user-attachments/assets/74baa570-5770-483e-be6d-d2f03386e37c" />
+- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/pushjjjj/SKILLLAB__PROR_2026_group7/blob/main/images/final_output.jpeg" />
 
 
 
@@ -733,13 +773,31 @@ Suggested images:
 Describe the final version of your project.
 
 **Response:**  
+The final project is a Smart Waste Segregation System controlled by the Shrike Lite controller, designed to automatically classify waste into three categories: metal, wet, and dry waste.
 
+The system uses a PNP proximity sensor to detect metallic objects and a soil moisture sensor to identify wet waste. Based on the sensor inputs, the controller processes the data and determines the appropriate category. A high-torque servo motor (MG996R) rotates a circular base containing three bins to align the correct bin under the outlet. A second servo motor operates a trapdoor mechanism that releases the waste into the selected bin.
+
+The entire setup is built using a layered structure with a sensing chamber at the top, a controlled drop mechanism in the middle, and a rotating bin system at the bottom. The system operates automatically with minimal human intervention and demonstrates an efficient prototype for waste segregation at the source.
+
+---
 
 ## 17.2 What Works Well
 
+- The system successfully detects metal waste using the proximity sensor with good reliability.
+- The soil moisture sensor effectively differentiates wet and dry waste after proper calibration.
+- The servo-based rotating mechanism accurately aligns the correct bin, ensuring proper segregation.
+- The trapdoor mechanism provides controlled disposal, preventing incorrect dropping of waste.
+- The system is fully automated and touchless, improving hygiene and ease of use.
+- The overall design is compact, low-cost, and easy to demonstrate.
 
 
 ## 17.3 What Still Needs Improvement
+- The accuracy of wet waste detection can vary depending on sensor calibration and type of material.
+- The system cannot distinguish between different types of dry waste (e.g., plastic vs paper).
+- The proximity sensor detects only certain metals, and may not detect non-ferrous metals like aluminum effectively.
+- The mechanical structure made from cardboard can be improved for better durability and stability.
+- The system processes one item at a time, and cannot handle bulk waste.
+- Additional features like display, IoT monitoring, or advanced sensors can further enhance functionality.
 
 
 ## 17.4 What Changed From the Original Plan
@@ -747,7 +805,7 @@ Describe the final version of your project.
 How did the project change from the initial idea?
 
 **Response:**  
-
+Initially, the project idea focused on building a fully advanced waste segregation system with multiple sensors and complex detection methods. However, due to time constraints and component limitations, the design was simplified to ensure a reliable working prototype.
 
 ---
 
@@ -760,7 +818,17 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
+18. Reflection
 
+18.1 Team Reflection
+
+Our team worked well in terms of collaboration and idea sharing. Each member contributed to different parts of the project such as coding, wiring, mechanical design, and documentation. We were able to divide tasks effectively, which helped us progress steadily.
+
+However, some challenges slowed us down, especially during the initial stages when we were deciding the final design and understanding how to integrate sensors with the mechanical system. Debugging issues like sensor inaccuracies and servo power problems also took additional time.
+
+Overall, we managed time reasonably well by completing the core functionality first and then improving the system step by step. Clear communication and teamwork helped us overcome difficulties and complete the project successfully.
+
+---
 
 ## 18.2 Technical Reflection
 
@@ -773,6 +841,24 @@ What did you learn about:
 - integration?
 
 **Response:**  
+Through this project, we gained practical knowledge in multiple technical areas:
+
+- Electronics:
+  We learned how to safely connect different components, manage power requirements (especially for servos), and ensure proper grounding to avoid unstable behavior.
+
+- Coding:
+  We improved our understanding of microcontroller programming, including reading sensor data, implementing decision logic, and controlling actuators like servo motors.
+
+- Mechanisms:
+  We learned how to design and implement mechanical systems such as a rotating base and a trapdoor mechanism, ensuring proper alignment and smooth operation.
+
+- Fabrication:
+  We developed skills in building prototypes using cardboard, glue, and simple tools while maintaining structural stability.
+
+- Integration:
+  The most important learning was integrating all components—sensors, controller, and mechanical parts—into a single working system. We understood that integration is more challenging than individual components.
+
+---
 
 
 ## 18.3 Design Reflection
@@ -787,7 +873,24 @@ What did you learn about:
 - iteration?
 
 **Response:**  
+This project helped us understand important design principles:
 
+- Designing:
+  We learned to convert an idea into a physical system by breaking it into smaller functional blocks.
+
+- Clarity:
+  Keeping the system simple (metal, wet, dry) improved reliability and made it easier to explain and demonstrate.
+
+- Physical Interaction:
+  Designing a single input bin with automated segregation improved usability and hygiene.
+
+- Understanding:
+  We realized that users prefer systems that are intuitive and require minimal effort.
+
+- Iteration:
+  Our design evolved multiple times—from a complex system to a simpler, more reliable one. Each iteration improved performance and stability.
+
+---
 
 ## 18.4 If You Had One More hour
 
@@ -795,7 +898,14 @@ What would you improve next?
 
 **Response:**  
 
-` `
+`If we had one more hour, we would:
+
+- Improve the mechanical finishing to make the structure more stable and professional
+- Fine-tune the sensor thresholds for more accurate detection
+- Make the servo movements smoother and faster
+- Add visual indicators like LEDs or a display for better user feedback
+
+These improvements would enhance both the performance and presentation of the system. `
 
 ---
 
